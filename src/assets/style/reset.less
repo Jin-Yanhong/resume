@@ -1,0 +1,40 @@
+@import "./variable.less";
+
+html,
+body {
+	.noGap();
+}
+
+a {
+	color: @color-theme;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		transition: @during-link;
+		color: @color-active;
+	}
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+ul {
+	.noGap();
+
+	dt,
+	dd,
+	li {
+		list-style: none;
+		.noGap();
+	}
+}
+
+img {
+	display: inline-block;
+}

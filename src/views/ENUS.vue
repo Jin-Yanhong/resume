@@ -1,0 +1,8 @@
+<template>
+	<div>
+		{{ $options.name }}
+	</div>
+</template>
+<script lang="ts" setup>
+//
+</script>
