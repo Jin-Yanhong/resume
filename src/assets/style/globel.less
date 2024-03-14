@@ -125,45 +125,6 @@ html {
 	text-align: center;
 }
 
-.btnStyle() {
-	height: 40px;
-	line-height: 40px;
-	color: @color-light;
-	text-align: center;
-	border-radius: @borderRadius;
-}
-
-.btn {
-	background-color: @color-theme;
-	.btnStyle();
-
-	&-primary {
-		.btnStyle();
-		background-color: @color-primary;
-	}
-
-	&-success {
-		.btnStyle();
-		background-color: @color-success;
-	}
-
-	&-danger {
-		.btnStyle();
-		background-color: @color-danger;
-	}
-
-	&-warning {
-		.btnStyle();
-		background-color: @color-warning;
-	}
-
-	&-block {
-		.btnStyle();
-		width: 100%;
-		display: block;
-	}
-}
-
 .hr {
 	margin: @layout-gap auto;
 	height: 1px;
@@ -189,17 +150,4 @@ html {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-}
-
-.required {
-	font-style: normal;
-	position: relative;
-
-	&::after {
-		content: '*';
-		position: absolute;
-		left: -8px;
-		color: #ee0a24;
-		font-size: 1.2rem;
-	}
 }

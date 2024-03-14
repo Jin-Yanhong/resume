@@ -1,13 +1,19 @@
 <template>
-	<div>
-		<span> {{ i18n.global.t('message.hello', { msg: 'haha' }) }}</span>
-	</div>
+	<div></div>
 </template>
 <script lang="ts" setup>
-import { i18n } from '@/i18n';
+import router from '@/router';
 import { defineOptions } from 'vue';
 
 defineOptions({
 	name: 'HomeView',
 });
+
+const local = window.navigator.language;
+
+if (local.includes('zh')) {
+	router.replace('/zh-CN');
+} else {
+	router.replace('/en-US');
+}
 </script>

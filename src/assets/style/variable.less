@@ -3,38 +3,21 @@
 @during-link: 0.3s;
 
 @color-theme: #0076F6;
-@color-theme-active: transparent;
-
 @color-light: #ffffff;
 @color-dark: #2f3640;
 @color-mask: #3335;
 
-@color-hover: #dcdde1;
-@color-shadow: #7f8fa6;
 @color-active: #0076F6;
 @color-border: #dcdfe6;
-@color-pageBg: #F3F5F7;
 
 @color-primary: #3c9cff;
 @color-success: #26C38E;
 @color-danger: #f56c6c;
 @color-warning: #f9ae3d;
 
-@color-text-light: #999;
-@color-text-dark: #333;
-
-@color-menu-bg: color-theme;
-@color-menu-bg-active: @color-theme-active;
-@color-layout-bg-navbar: @color-theme;
-@color-layout-bg-sidebar: @color-theme;
-
-@borderRadius: 6px;
-
-
 @heightAuto: 100%; // 高度被内容撑开
 // 100vh - 10vh:navbar Height
 @heightFooter: calc(100vh - 80px); // 高度占满空间
-@heightfull: 100vh; // 高度占满空间
 
 .mix-in-flex() {
 	display: flex;
@@ -101,14 +84,4 @@
 		.mix-in-flex();
 		flex-wrap: nowrap;
 	}
-}
-
-.mask() {
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	background: #00000044;
 }

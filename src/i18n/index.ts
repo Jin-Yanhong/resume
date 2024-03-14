@@ -9,8 +9,8 @@ import zh from './locales/zh.json';
 
 const i18n: I18n = createI18n({
 	legacy: true,
-	locale: 'en',
-	fallbackLocale: 'zh',
+	locale: 'zh',
+	fallbackLocale: 'en',
 	dateTimeFormats,
 	numberFormats,
 	messages: {
