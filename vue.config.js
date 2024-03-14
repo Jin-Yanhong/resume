@@ -1,4 +1,10 @@
+const path = require('path');
 const { defineConfig } = require('@vue/cli-service');
+
+function resolve(dir) {
+	return path.join(__dirname, dir);
+}
+
 module.exports = defineConfig({
 	transpileDependencies: true,
 	lintOnSave: false,
@@ -8,6 +14,23 @@ module.exports = defineConfig({
 		port: 8090,
 		client: {
 			overlay: false,
+		},
+	},
+	configureWebpack: {
+		devtool: process.env.NODE_ENV === 'production' ? false : 'inline-source-map',
+		performance: {
+			hints: false,
+		},
+		optimization: {
+			splitChunks: {
+				minSize: 102400,
+				maxSize: 2097152,
+			},
+		},
+		resolve: {
+			alias: {
+				'@': resolve('/src'),
+			},
 		},
 	},
 	chainWebpack: config => {

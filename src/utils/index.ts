@@ -1,4 +1,5 @@
 import { i18n } from '@/i18n';
+import { jsPDF } from 'jspdf';
 
 export function getStorage(key: string): string | Array<any> | object {
 	const str: string = window.localStorage[key] ?? undefined;
@@ -29,4 +30,21 @@ export function i18nTm(mst: string): string {
 	const { te, tm } = i18n.global;
 	const msg = te(mst) ? tm(mst) : '';
 	return msg;
+}
+
+export function html2PDF(html: HTMLElement | string) {
+	var doc = new jsPDF();
+	doc.html(html, {
+		callback: doc => doc.save(),
+		filename: 'xxx',
+		windowWidth: 100,
+		margin: 20,
+		html2canvas: {
+			width: 595,
+			height: 842,
+			windowWidth: 595,
+			windowHeight: 842,
+			scale: 1,
+		},
+	});
 }
